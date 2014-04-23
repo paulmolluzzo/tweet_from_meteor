@@ -1,5 +1,4 @@
 var Twitter = Meteor.require("twitter");
-var TweetStream = new Meteor.Stream('tweets');
 var conf = JSON.parse(Assets.getText('twitter.json'));
 var twit = new Twitter({
 	consumer_key: conf.consumer.key,
@@ -17,10 +16,12 @@ var twit = new Twitter({
 // });
 
 Meteor.methods({
-    searchTwitter: function() {
-        console.log("made it");
+    searchTwitter: function(token) {
+        var TweetStream = new Meteor.Stream(token);
+        console.log("made it " + token);
         twit.search('anything', function(data) {
-            TweetStream.emit('tweet', data);
-        });
+            console.log(token)
+            TweetStream.emit(token, data);
+        });   
     }
 })
