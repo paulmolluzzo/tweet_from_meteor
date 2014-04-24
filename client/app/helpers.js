@@ -29,6 +29,7 @@ UI.registerHelper('linkify', function(tweet) {
 
 Template.tweets.events({
 	'click #search': function() {
+		Tweets.remove({});
 		var term = document.getElementById('search-term').value || "test";
 		document.getElementById('search').disabled = true;
 		Meteor.call('searchTwitter', term, function(err, result){
