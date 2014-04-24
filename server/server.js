@@ -17,5 +17,15 @@ Meteor.methods({
         });
 
         return fut.wait();
+    },
+
+    getUser: function (term) {
+        var fut = new Future();
+
+        twit.get('/users/show.json', {screen_name: term}, function(data) {
+                fut['return'](data);
+        });
+
+        return fut.wait();
     }
 })
