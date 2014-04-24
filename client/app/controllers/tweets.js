@@ -1,11 +1,3 @@
-// TweetStream = new Meteor.Stream();
-
-// TweetStream.on('tweet', function(tweet) {
-// 	tweet.created_at = moment(tweet.created_at).toDate();
-// 	console.log(tweet);
-// 	Tweets.insert(tweet);
-// });
-
 Template.tweets.tweets = function() {
 	return Tweets.find({}, {
 		sort: {
