@@ -1,5 +1,3 @@
-TweetStream = new Meteor.Stream('blah');
-
 UI.registerHelper('moments', function(date) {
 	return moment(date).format('HH:mm:ss');
 });
@@ -31,14 +29,13 @@ UI.registerHelper('linkify', function(tweet) {
 
 Template.tweets.events({
 	'click': function() {
-		var token = 'blah';
-		console.log(token + 'client start')
-		Meteor.call('searchTwitter', token);
-		TweetStream.on(token, function(tweet) {
-			tweet.created_at = moment(tweet.created_at).toDate();
-			console.log(tweet);
-			for (var i=0; i < tweet.statuses.length; i++) {
-				Tweets.insert(tweet.statuses[i]);	
+		var term = "testing";
+		Meteor.call('searchTwitter', term, function(err, result){
+			if(!err){
+				result.created_at = moment(result.created_at).toDate();
+				for (var i=0; i < result.statuses.length; i++) {
+					Tweets.insert(result.statuses[i]);	
+				}
 			}
 		});
 		return Tweets.find({});
