@@ -28,8 +28,9 @@ UI.registerHelper('linkify', function(tweet) {
 });
 
 Template.tweets.events({
-	'click': function() {
-		var term = "testing";
+	'click #search': function() {
+		var term = document.getElementById('search-term').value || "test";
+		document.getElementById('search').disabled = true;
 		Meteor.call('searchTwitter', term, function(err, result){
 			if(!err){
 				result.created_at = moment(result.created_at).toDate();
@@ -38,6 +39,7 @@ Template.tweets.events({
 				}
 			}
 		});
+		document.getElementById('search').disabled = false;
 		return Tweets.find({});
 	}
 })

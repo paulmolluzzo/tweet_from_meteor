@@ -1,5 +1,6 @@
 <template name="tweets">
-	<button>test</button>
+	<input id="search-term" type="text" name="search" placeholder="Search Twitter...">
+	<button id="search">Search</button>
 	<div class="ui piled feed segment">
   		<h2 class="ui header">
   			Recent Activity
@@ -8,13 +9,9 @@
   		{{#each tweets}}
   			<div class="event">
 				<div class="label">
-					{{#if retweeted_status}}
-						<i class="circular retweet icon"></i>
-					{{else}}
-						<a href="http://twitter.com/{{user.screen_name}}" title="{{user.name}}">
-		  					<img src="{{user.profile_image_url}}">
-		  				</a>
-		  			{{/if}}
+					<a href="http://twitter.com/{{user.screen_name}}" title="{{user.name}}">
+	  					<img src="{{user.profile_image_url}}">
+	  				</a>
 				</div>
 				<div class="content">
 	  				<div class="date">{{moments created_at}}</div>
