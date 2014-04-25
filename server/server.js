@@ -1,6 +1,18 @@
+var conf = JSON.parse(Assets.getText('twitter.json'));
+
+Meteor.startup(function() {
+  Accounts.loginServiceConfiguration.remove({
+    service: "twitter"
+  });
+  Accounts.loginServiceConfiguration.insert({
+    service: "twitter",
+    consumerKey: conf.consumer.key,
+    secret: conf.consumer.secret
+  });
+});
+
 Future = Npm.require('fibers/future');
 var Twitter = Meteor.require("twitter");
-var conf = JSON.parse(Assets.getText('twitter.json'));
 var twit = new Twitter({
 	consumer_key: conf.consumer.key,
 	consumer_secret: conf.consumer.secret,
@@ -20,6 +32,23 @@ Meteor.methods({
     },
 
     getUser: function (term) {
+        var fut = new Future();
+
+        twit.get('/users/show.json', {screen_name: term}, function(data) {
+                fut['return'](data);
+        });
+
+        return fut.wait();
+    },
+
+    getTest: function(id, term) {
+        console.log(twit.options.access_token_key);
+        twit.options.access_token_key = Meteor.users.findOne({_id: id}).services.twitter.accessToken;
+
+        twit.options.access_token_secret = Meteor.users.findOne({_id: id}).services.twitter.accessTokenSecret;
+
+        console.log(twit);
+
         var fut = new Future();
 
         twit.get('/users/show.json', {screen_name: term}, function(data) {

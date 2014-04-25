@@ -25,5 +25,16 @@ Template.actions.events({
         });
         document.getElementById('get-user').disabled = false;
         return Tweets.find({});
-    }
+    },
+
+    'click #test': function() {
+        var id = Meteor.userId();
+        var term = "twitter"
+        Meteor.call('getTest', id, term, function(err, result){
+            if(!err){
+                console.log(result);
+            }
+        });
+    },
+
 })
