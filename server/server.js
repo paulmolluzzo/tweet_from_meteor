@@ -61,6 +61,6 @@ Meteor.methods({
     },
 
     newTest: function(term) {
-        return twitter.get('/users/show.json',{screen_name: term})
+        return twitter.get('users/show.json',{screen_name: term})
     }
 })
