@@ -7,7 +7,7 @@
       "semantic-ui": {},
       "momentjs": {},
       "twitter-api": {
-        "git": "https://github.com/matthewforr/meteor-twitter-api.git",
+        "git": "https://github.com/paulmolluzzo/meteor-twitter-api.git",
         "branch": "master"
       }
     },
@@ -33,9 +33,9 @@
         "commit": "59a762e297082eea8b8cae00374c2b7ac6f89529"
       },
       "twitter-api": {
-        "git": "https://github.com/matthewforr/meteor-twitter-api.git",
+        "git": "https://github.com/paulmolluzzo/meteor-twitter-api.git",
         "branch": "master",
-        "commit": "03332c69a3aa5131ea4c343f56888cae0f82cadb"
+        "commit": "74e972c432c69b6b756ea6abbd943c65b92f6091"
       }
     }
   }
