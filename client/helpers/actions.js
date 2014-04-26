@@ -30,7 +30,7 @@ Template.actions.events({
     'click #test': function() {
         var id = Meteor.userId();
         var term = "twitter"
-        Meteor.call('getTest', id, term, function(err, result){
+        Meteor.call('newTest', term, function(err, result){
             if(!err){
                 console.log(result);
             }
