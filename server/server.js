@@ -24,40 +24,11 @@ var twitter = new TwitterApi();
 
 Meteor.methods({
     searchTwitter: function(term) {
-        var fut = new Future();
-
-        twit.search(term, function(data) {
-            fut['return'](data);
-        });
-
-        return fut.wait();
+        return twitter.search(term);
     },
 
     getUser: function (term) {
-        var fut = new Future();
-
-        twit.get('/users/show.json', {screen_name: term}, function(data) {
-                fut['return'](data);
-        });
-
-        return fut.wait();
-    },
-
-    getTest: function(id, term) {
-        console.log(twit.options.access_token_key);
-        twit.options.access_token_key = Meteor.users.findOne({_id: id}).services.twitter.accessToken;
-
-        twit.options.access_token_secret = Meteor.users.findOne({_id: id}).services.twitter.accessTokenSecret;
-
-        console.log(twit);
-
-        var fut = new Future();
-
-        twit.get('/users/show.json', {screen_name: term}, function(data) {
-                fut['return'](data);
-        });
-
-        return fut.wait();
+        return twitter.get('users/show.json', {screen_name: term});
     },
 
     newTest: function(term) {

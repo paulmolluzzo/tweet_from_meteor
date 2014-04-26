@@ -5,9 +5,9 @@ Template.actions.events({
         document.getElementById('search').disabled = true;
         Meteor.call('searchTwitter', term, function(err, result){
             if(!err){
-                result.created_at = moment(result.created_at).toDate();
-                for (var i=0; i < result.statuses.length; i++) {
-                    Tweets.insert(result.statuses[i]);  
+                result.headers.date = moment(result.headers.date).toDate();
+                for (var i=0; i < result.data.statuses.length; i++) {
+                    Tweets.insert(result.data.statuses[i]);  
                 }
             }
         });
@@ -16,7 +16,7 @@ Template.actions.events({
     },
 
     'click #get-user': function() {
-        var term = document.getElementById('username').value || "test";
+        var term = document.getElementById('username').value || "twitter";
         document.getElementById('get-user').disabled = true;
         Meteor.call('getUser', term, function(err, result){
             if(!err){
