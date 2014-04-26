@@ -1,8 +1,11 @@
 {
   "packages": {
-	"npm": {},
-	"streams": {},
-	"semantic-ui": {},
-	"momentjs": {}
+    "npm": {},
+    "streams": {},
+    "semantic-ui": {},
+    "momentjs": {},
+    "twitter-api": {
+        "git": "https://github.com/matthewforr/meteor-twitter-api.git"
+    }
   }
 }

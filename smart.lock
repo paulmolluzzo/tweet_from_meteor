@@ -5,7 +5,11 @@
       "npm": {},
       "streams": {},
       "semantic-ui": {},
-      "momentjs": {}
+      "momentjs": {},
+      "twitter-api": {
+        "git": "https://github.com/matthewforr/meteor-twitter-api.git",
+        "branch": "master"
+      }
     },
     "packages": {
       "npm": {
@@ -20,13 +24,18 @@
       },
       "semantic-ui": {
         "git": "https://github.com/nooitaf/meteor-semantic-ui.git",
-        "tag": "v0.15.1",
-        "commit": "ee29706b4ccc99f2d44d5be1347a09a2f77d03cb"
+        "tag": "v0.16.1",
+        "commit": "46da3245561e5e64f03b1e2c8807cc6125aa4d98"
       },
       "momentjs": {
         "git": "https://github.com/crapthings/meteor-momentjs.git",
         "tag": "v2.1.0.2",
         "commit": "59a762e297082eea8b8cae00374c2b7ac6f89529"
+      },
+      "twitter-api": {
+        "git": "https://github.com/matthewforr/meteor-twitter-api.git",
+        "branch": "master",
+        "commit": "03332c69a3aa5131ea4c343f56888cae0f82cadb"
       }
     }
   }

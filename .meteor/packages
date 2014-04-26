@@ -11,3 +11,5 @@ momentjs
 underscore
 accounts-twitter
 accounts-ui
+twitter-api
+oauth1
