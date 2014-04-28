@@ -3,12 +3,10 @@
 </head>
 
 <template name="layout">
-    <body>
-        {{>yield region='header'}}
-        <div class="container-fluid">
-            {{>yield}}
-        </div>
-    </body>
+      {{>yield region='header'}}
+      <div class="container-fluid">
+          {{>yield}}
+      </div>
 </template>
 
 <template name="header">

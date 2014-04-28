@@ -13,12 +13,12 @@ Router.map(function () {
 
     this.route('searchTweets', {
         path: '/search',
-        template: 'search-tweets'
+        template: 'searchTweets'
     });
 
     this.route('getUser', {
         path: '/get_a_user',
-        template: 'get-a-user'
+        template: 'getUser'
     });
 });
 

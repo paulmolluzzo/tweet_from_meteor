@@ -1,35 +1,34 @@
 <template name="tweets">
 	{{#each tweets}}
-		<div class="event">
-			<div class="label">
-				<a href="http://twitter.com/{{user.screen_name}}" title="{{user.name}}">
-						<img src="{{user.profile_image_url}}">
-					</a>
-			</div>
-			<div class="content">
-					<div class="date">{{moments created_at}}</div>
-					<div class="summary">
-						{{#if retweeted_status}}
-							<a href="http://twitter.com/{{user.screen_name}}">{{user.name}}</a> retweeted
-						{{else}}
-							{{{linkify this}}}
-						{{/if}}
-					</div>
-					{{#if retweeted_status}}
-						<div class="extra text">
-							{{{linkify retweeted_status}}}
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<div class="media">
+						<a class="pull-left" href="http://twitter.com/{{user.screen_name}}">
+							<img src="{{user.profile_image_url}}" class="media-object">
+						</a>
+						<div class="media-body">
+							{{#if retweeted_status}}
+								<h4 class="media-heading"><a href="http://twitter.com/{{user.screen_name}}">{{user.name}}</a> retweeted:</h4>
+							{{else}}
+								<h4 class="media-heading"><a href="http://twitter.com/{{user.screen_name}}">{{user.name}}</a> tweeted:</h4>
+							{{/if}}
+							{{moments created_at}}
 						</div>
-					{{else}}
-	  				{{#if entities.media}}
-	  					<div class="extra images">
-	  						{{#each entities.media}}
-	  							{{#if isPhoto}}
-									<a href="{{expanded_url}}"><img src="{{media_url}}" /></a>
-								{{/if}}
-							{{/each}}
-	  					</div>
-	  				{{/if}}
-	  			{{/if}}
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				{{{linkify this}}}
+  				{{#if entities.media}}
+  					<div class="extra images">
+  						{{#each entities.media}}
+  							{{#if isPhoto}}
+								<a href="{{expanded_url}}"><img src="{{media_url}}" /></a>
+							{{/if}}
+						{{/each}}
+  					</div>
+  				{{/if}}
 			</div>
 		</div>
 	{{/each}}
