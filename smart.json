@@ -6,6 +6,7 @@
     "twitter-api": {
       "git": "https://github.com/matthewforr/meteor-twitter-api.git"
     },
-    "bootstrap-3": {}
+    "bootstrap-3": {},
+    "iron-router": {}
   }
 }
