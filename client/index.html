@@ -1,9 +1,44 @@
 <head>
-  <title>Tweets for #JavaScript</title>
+  <title>Twitter in Meteor</title>
 </head>
 
-<body>
-    {{> loginButtons}}
-    {{> actions}}
-    {{> tweets}}
-</body>
+<template name="layout">
+    <body>
+        {{>yield region='header'}}
+        <div class="container-fluid">
+            {{>yield}}
+        </div>
+    </body>
+</template>
+
+<template name="header">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Twitter in Meteor</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="{{ pathFor 'searchTweets' }}">Search Tweets</a></li>
+            <li><a href="{{ pathFor 'getUser' }}">Get a User</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</template>
+
+<template name="home">
+    <div class="jumbotron">
+        <h1>Using Twitter in a Meteor Application</h1>
+
+        <p>To get started you need to log in to Twitter.</p>
+
+        {{> loginButtons}}
+    </div>
+</template>
