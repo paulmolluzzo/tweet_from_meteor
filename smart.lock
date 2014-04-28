@@ -8,7 +8,8 @@
       "twitter-api": {
         "git": "https://github.com/matthewforr/meteor-twitter-api.git",
         "branch": "master"
-      }
+      },
+      "bootstrap-3": {}
     },
     "packages": {
       "streams": {
@@ -30,6 +31,11 @@
         "git": "https://github.com/matthewforr/meteor-twitter-api.git",
         "branch": "master",
         "commit": "03332c69a3aa5131ea4c343f56888cae0f82cadb"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v3.1.1-1",
+        "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
       }
     }
   }
