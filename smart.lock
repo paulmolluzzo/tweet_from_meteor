@@ -10,7 +10,8 @@
         "branch": "master"
       },
       "bootstrap-3": {},
-      "iron-router": {}
+      "iron-router": {},
+      "GAnalytics": {}
     },
     "packages": {
       "streams": {
@@ -42,6 +43,11 @@
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.7.1",
         "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "GAnalytics": {
+        "git": "https://github.com/datariot/meteor-ganalytics.git",
+        "tag": "v0.1.1",
+        "commit": "91b19d37687bb2cd7976fb43b482143a53509d7e"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
