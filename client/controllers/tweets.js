@@ -1,4 +1,4 @@
-Template.tweets.tweets = function() {
+Template.searchTweets.tweets = function() {
 	return Tweets.find({}, {
 		sort: {
 			'created_at': -1
@@ -6,6 +6,6 @@ Template.tweets.tweets = function() {
 	});
 };
 
-Template.tweets.isPhoto = function() {
+Template.searchTweets.isPhoto = function() {
     return this.type === "photo";
 };
