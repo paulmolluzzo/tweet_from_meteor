@@ -35,5 +35,13 @@ Meteor.methods({
 
     homeTimeline: function() {
         return twitter.homeTimeline();
+    },
+
+    userTimeline: function() {
+        return twitter.userTimeline();
+    },
+
+    mentionTimeline: function() {
+        return twitter.get('statuses/mentions_timeline.json');
     }
 })

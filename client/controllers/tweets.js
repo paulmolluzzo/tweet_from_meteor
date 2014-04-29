@@ -25,3 +25,27 @@ Template.homeTimeline.tweets = function() {
 Template.homeTimeline.isPhoto = function() {
     return this.type === "photo";
 };
+
+Template.userTimeline.tweets = function() {
+    return Tweets.find({}, {
+        sort: {
+            'created_at': -1
+        }
+    });
+};
+
+Template.userTimeline.isPhoto = function() {
+    return this.type === "photo";
+};
+
+Template.mentionTimeline.tweets = function() {
+    return Tweets.find({}, {
+        sort: {
+            'created_at': -1
+        }
+    });
+};
+
+Template.mentionTimeline.isPhoto = function() {
+    return this.type === "photo";
+};

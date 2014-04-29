@@ -27,6 +27,22 @@ Router.map(function () {
         }
     });
 
+    this.route('userTimeline', {
+        path: '/user_timeline',
+        template: 'userTimeline',
+        onBeforeAction: function(){
+            Tweets.remove({});
+        }
+    });
+
+    this.route('mentionTimeline', {
+        path: '/mention_timeline',
+        template: 'mentionTimeline',
+        onBeforeAction: function(){
+            Tweets.remove({});
+        }
+    });
+
     this.route('getUser', {
         path: '/get_a_user',
         template: 'getUser',
