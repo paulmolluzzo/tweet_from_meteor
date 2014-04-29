@@ -28,24 +28,24 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search Actions <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ pathFor 'searchTweets' }}">Search Tweets</a></li>
-                            <li><a href="{{ pathFor 'searchUsers' }}">Search Users</a></li>
+                            <li><a href="{{ pathFor 'searchTweets' }}" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Search Tweets</a></li>
+                            <li><a href="{{ pathFor 'searchUsers' }}" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Search Users</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Timelines <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ pathFor 'homeTimeline' }}">View Home Timeline</a></li>
-                            <li><a href="{{ pathFor 'userTimeline' }}">View User Timeline</a></li>
-                            <li><a href="{{ pathFor 'mentionTimeline' }}">View Mention Timeline</a></li>
+                            <li><a href="{{ pathFor 'homeTimeline' }}" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">View Home Timeline</a></li>
+                            <li><a href="{{ pathFor 'userTimeline' }}" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">View User Timeline</a></li>
+                            <li><a href="{{ pathFor 'mentionTimeline' }}" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">View Mention Timeline</a></li>
                         </ul>
                     </li>
                     
-                    <li><a href="{{ pathFor 'getUser' }}">Get a User</a></li>
-                    <li><a href="{{ pathFor 'postTweet' }}">Post a Tweet</a></li>
+                    <li><a href="{{ pathFor 'getUser' }}" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Get a User</a></li>
+                    <li><a href="{{ pathFor 'postTweet' }}" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Post a Tweet</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a>{{#if currentUser}}Logged in as {{/if}}{{> loginButtons}}</a></li>
+                    <li><a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">{{#if currentUser}}Logged in as {{/if}}{{> loginButtons}}</a></li>
                 </ul>
             </div>
         </div>
