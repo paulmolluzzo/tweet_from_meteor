@@ -1,5 +1,5 @@
 Template.getUser.events({
-    'click #get-user': function(event) {
+    'submit #get-user': function(event) {
         event.preventDefault();
         Users.remove({});
         var term = document.getElementById('username').value || "paulmolluzzo";

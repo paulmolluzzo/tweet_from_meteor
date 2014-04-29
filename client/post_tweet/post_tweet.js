@@ -1,5 +1,5 @@
 Template.postTweet.events({
-    'click #post-tweet': function(event) {
+    'submit #post-tweet': function(event) {
         event.preventDefault();
         var tweet = document.getElementById('tweet').value;
         Meteor.call('postTweet', tweet, function(err, result){
