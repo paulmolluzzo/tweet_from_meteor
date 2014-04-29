@@ -1,9 +1,5 @@
 Template.searchTweets.tweets = function() {
-	return Tweets.find({}, {
-		sort: {
-			'created_at': -1
-		}
-	});
+	return Tweets.find({});
 };
 
 Template.searchTweets.isPhoto = function() {
@@ -15,11 +11,7 @@ Template.postTweet.tweet = function() {
 };
 
 Template.homeTimeline.tweets = function() {
-    return Tweets.find({}, {
-        sort: {
-            'created_at': -1
-        }
-    });
+    return Tweets.find({});
 };
 
 Template.homeTimeline.isPhoto = function() {
@@ -27,11 +19,7 @@ Template.homeTimeline.isPhoto = function() {
 };
 
 Template.userTimeline.tweets = function() {
-    return Tweets.find({}, {
-        sort: {
-            'created_at': -1
-        }
-    });
+    return Tweets.find({});
 };
 
 Template.userTimeline.isPhoto = function() {
@@ -39,11 +27,7 @@ Template.userTimeline.isPhoto = function() {
 };
 
 Template.mentionTimeline.tweets = function() {
-    return Tweets.find({}, {
-        sort: {
-            'created_at': -1
-        }
-    });
+    return Tweets.find({});
 };
 
 Template.mentionTimeline.isPhoto = function() {
