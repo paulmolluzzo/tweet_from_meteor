@@ -33,7 +33,7 @@ Meteor.methods({
         return twitter.postTweet(tweet)
     },
 
-    getOauth: function() {
-        return twitter.userTimeline();
+    homeTimeline: function() {
+        return twitter.homeTimeline();
     }
 })

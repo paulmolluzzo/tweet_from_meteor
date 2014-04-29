@@ -19,6 +19,14 @@ Router.map(function () {
         }
     });
 
+    this.route('homeTimeline', {
+        path: '/home_timeline',
+        template: 'homeTimeline',
+        onBeforeAction: function(){
+            Tweets.remove({});
+        }
+    });
+
     this.route('getUser', {
         path: '/get_a_user',
         template: 'getUser',
