@@ -11,7 +11,8 @@
       },
       "bootstrap-3": {},
       "iron-router": {},
-      "GAnalytics": {}
+      "GAnalytics": {},
+      "apm": {}
     },
     "packages": {
       "streams": {
@@ -48,6 +49,11 @@
         "git": "https://github.com/datariot/meteor-ganalytics.git",
         "tag": "v0.1.1",
         "commit": "91b19d37687bb2cd7976fb43b482143a53509d7e"
+      },
+      "apm": {
+        "git": "https://github.com/arunoda/meteor-apm-client.git",
+        "tag": "v1.2.2",
+        "commit": "46019950b917191b78a9c81349421521ce07a932"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
