@@ -1,5 +1,5 @@
 UI.registerHelper('moments', function(date) {
-	return moment(date).format('HH:mm:ss');
+	return moment(date).format('h:ma on MMMM DD, YYYY');
 });
 
 UI.registerHelper('linkify', function(tweet) {
