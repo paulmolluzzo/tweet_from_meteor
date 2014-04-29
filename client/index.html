@@ -7,6 +7,7 @@
       <div class="container-fluid">
           {{>yield}}
       </div>
+      {{>yield region='footer'}}
 </template>
 
 <template name="header">
@@ -58,4 +59,15 @@
 
         {{> loginButtons}}
     </div>
+</template>
+
+<template name="footer">
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://twitter.com/paulmolluzzo">By @paulmolluzzo</a></li>
+                <li><a href="https://github.com/paulmolluzzo/tweet_from_meteor/">View Code on GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
 </template>
