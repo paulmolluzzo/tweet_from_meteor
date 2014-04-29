@@ -13,22 +13,34 @@ Router.map(function () {
 
     this.route('searchTweets', {
         path: '/search_tweets',
-        template: 'searchTweets'
+        template: 'searchTweets',
+        onBeforeAction: function(){
+            Tweets.remove({});
+        }
     });
 
     this.route('getUser', {
         path: '/get_a_user',
-        template: 'getUser'
+        template: 'getUser',
+        onBeforeAction: function(){
+            Users.remove({});
+        }
     });
 
     this.route('searchUsers', {
         path: '/search_users',
-        template: 'searchUsers'
+        template: 'searchUsers',
+        onBeforeAction: function(){
+            Users.remove({});
+        }
     });
 
     this.route('postTweet', {
         path: '/post_tweet',
-        template: 'postTweet'
+        template: 'postTweet',
+        onBeforeAction: function(){
+            Tweets.remove({});
+        }
     });
 });
 
