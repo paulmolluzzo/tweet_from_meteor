@@ -27,24 +27,22 @@
         </div>
         <div id="tweet-list">
             {{#if tweet}}
-                <div class="row col-sm-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="panel-title">
-                                <div class="media">
-                                    <a class="pull-left" href="http://twitter.com/{{tweet.user.screen_name}}">
-                                        <img src="{{tweet.user.profile_image_url}}" class="media-object">
-                                    </a>
-                                    <div class="media-body">
-                                        <h4 class="media-heading"><a href="http://twitter.com/{{tweet.user.screen_name}}">{{tweet.user.name}}</a> tweeted:</h4>
-                                        {{moments tweet.created_at}} - <a href="http://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}">View on Twitter</a>
-                                    </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <div class="media">
+                                <a class="pull-left" href="http://twitter.com/{{tweet.user.screen_name}}">
+                                    <img src="{{tweet.user.profile_image_url}}" class="media-object">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="http://twitter.com/{{tweet.user.screen_name}}">{{tweet.user.name}}</a> tweeted:</h4>
+                                    {{moments tweet.created_at}} - <a href="http://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}">View on Twitter</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="panel-body">
-                            {{{linkify tweet}}}
-                        </div>
+                    </div>
+                    <div class="panel-body">
+                        {{{linkify tweet}}}
                     </div>
                 </div>
             {{/if}}
