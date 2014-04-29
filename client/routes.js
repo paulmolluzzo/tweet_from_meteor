@@ -44,6 +44,9 @@ Router.map(function () {
     });
 });
 
+Router.onRun(function(){
+    GAnalytics.pageview();
+});
 
 Router.onBeforeAction(function(){
     if (!Meteor.user() && !Meteor.loggingIn()) {
