@@ -11,7 +11,6 @@ Template.searchTweets.events({
                         console.log(result.data);
                         Tweets.insert(result.data.statuses[i]);  
                     }
-                    console.log("done");
                 }
             }
         });
