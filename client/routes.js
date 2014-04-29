@@ -25,6 +25,11 @@ Router.map(function () {
         path: '/search_users',
         template: 'searchUsers'
     });
+
+    this.route('postTweet', {
+        path: '/post_tweet',
+        template: 'postTweet'
+    });
 });
 
 

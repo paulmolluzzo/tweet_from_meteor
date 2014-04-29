@@ -8,6 +8,7 @@ Template.searchTweets.events({
                 if (result.statusCode === 200) {
                     result.headers.date = moment(result.headers.date).toDate();
                     for (var i=0; i < result.data.statuses.length; i++) {
+                        console.log(result.data);
                         Tweets.insert(result.data.statuses[i]);  
                     }
                     console.log("done");

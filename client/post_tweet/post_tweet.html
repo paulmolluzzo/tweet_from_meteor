@@ -1,0 +1,53 @@
+<template name="postTweet">
+    <div class="row col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <div class="media">
+                        <a class="pull-left" href="http://twitter.com/{{currentUser.profile.username}}">
+                            <img src="{{currentUser.profile.picture}}" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="http://twitter.com/{{currentUser.profile.username}}">{{currentUser.profile.username}}</a></h4>
+                            Post a Tweet
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="body" class="panel-body">
+                <form id="post-tweet" class="col-sm-12" role="search">
+                    <div class="form-group">
+                        <label class="sr-only" for="username">User to find:</label>
+                        <textarea id="tweet" type="textfield" class="form-control" rows="3" placeholder="Tweet message."></textarea>
+                    </div>
+                    <h2><span id="counter" class="pull-right label label-default">140</span></h2>
+                    <button type="submit" class="btn btn-primary">Tweet</button>
+                </form>
+            </div>
+        </div>
+        <div id="tweet-list">
+            {{#if tweet}}
+                <div class="row col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <div class="media">
+                                    <a class="pull-left" href="http://twitter.com/{{tweet.user.screen_name}}">
+                                        <img src="{{tweet.user.profile_image_url}}" class="media-object">
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="http://twitter.com/{{tweet.user.screen_name}}">{{tweet.user.name}}</a> tweeted:</h4>
+                                        {{moments tweet.created_at}} - <a href="http://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}">View on Twitter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            {{{linkify tweet}}}
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</template>

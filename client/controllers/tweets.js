@@ -9,3 +9,7 @@ Template.searchTweets.tweets = function() {
 Template.searchTweets.isPhoto = function() {
     return this.type === "photo";
 };
+
+Template.postTweet.tweet = function() {
+    return Tweets.findOne({});
+};
