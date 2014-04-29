@@ -1,0 +1,75 @@
+<template name="searchUsers">
+    <div class="row col-sm-12">
+        <form id="search-users" class="col-sm-12" role="search">
+            <div class="form-group">
+                <label for="search-term">Search Term:</label>
+                <input id="search-term" type="text" class="form-control" placeholder="Search Twitter Users...">
+            </div>
+            <div class="form-group">
+                <label for="page">Start Page:</label>
+                <select id="page" class="form-control">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="count">Items to Return</label>
+                <select id="count" class="form-control">
+                    <option value="5<">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    {{#each users}}
+        <div class="row col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <div class="media">
+                            <a class="pull-left" href="http://twitter.com/{{screen_name}}">
+                                <img src="{{profile_image_url}}" class="media-object">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="http://twitter.com/{{screen_name}}">{{name}}</a></h4>
+                                {{description}} - <a href="{{url}}">{{url}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-condensedtable-responsive">
+                        <thead>
+                            <th>Data Point</th>
+                            <th>Value</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>id:</td>
+                                <td>{{id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Followers:</td>
+                                <td>{{followers_count}}</td>
+                            </tr>
+                            <tr>
+                                <td>Following:</td>
+                                <td>{{friends_count}}</td>
+                            </tr>
+                            <tr>
+                                <td>Statuses:</td>
+                                <td>{{statuses_count}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</template>

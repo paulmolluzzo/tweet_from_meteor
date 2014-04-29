@@ -7,5 +7,9 @@ Meteor.methods({
 
     getUser: function (term) {
         return twitter.get('users/show.json', {screen_name: term});
+    },
+
+    searchUsers: function(term, page, count) {
+        return twitter.usersSearch(term, page, count)
     }
 })
