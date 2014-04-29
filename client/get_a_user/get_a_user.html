@@ -1,13 +1,12 @@
 <template name="getUser">
-    <div>
-        <div class="row col-sm-12">
-            <form id="get-user" class="col-sm-12" role="search">
-                <div class="form-group col-xs-9">
-                    <input id="username" type="text" class="form-control" placeholder="Enter a Username...">
-                </div>
-                <button type="submit" class="btn btn-primary col-xs-3">Submit</button>
-            </form>
-        </div>
+    <div class="row col-sm-12">
+        <form id="get-user" class="col-sm-12" role="search">
+            <div class="form-group col-xs-9">
+                <label class="sr-only" for="username">User to find:</label>
+                <input id="username" type="text" class="form-control" placeholder="Enter a Username...">
+            </div>
+            <button type="submit" class="btn btn-primary col-xs-3">Submit</button>
+        </form>
     </div>
     {{#if user}}
         <div class="row col-sm-12">
