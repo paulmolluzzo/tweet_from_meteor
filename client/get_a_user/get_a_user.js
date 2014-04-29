@@ -1,15 +1,14 @@
 Template.getUser.events({
-    'click #get-user': function() {
-        var term = document.getElementById('username').value || "twitter";
-        document.getElementById('get-user').disabled = true;
+    'click #get-user': function(event) {
+        event.preventDefault();
+        Users.remove({});
+        var term = document.getElementById('username').value || "paulmolluzzo";
         Meteor.call('getUser', term, function(err, result){
             if(!err){
                 if (result.statusCode === 200)
-                    console.log(result);
+                    Users.insert(result.data);
             }
         });
-        document.getElementById('get-user').disabled = false;
-        return Tweets.find({});
+        return Users.findOne({});
     }
-
 })
