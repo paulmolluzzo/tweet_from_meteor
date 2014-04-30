@@ -21,8 +21,10 @@ Template.postTweet.events({
         var tweet = document.getElementById('tweet').value
         var count = 140 - tweet.length;
         var counter = document.getElementById('counter');
+        var submitButton = document.getElementById('post');
         var baseClasses = "pull-right label label-default";
         counter.innerHTML = count;
+        count < 0 ? submitButton.disabled=true : submitButton.disabled=false;
         if (count <= 10 && counter.className == baseClasses) {
             counter.className = baseClasses + " label-danger";
         }
