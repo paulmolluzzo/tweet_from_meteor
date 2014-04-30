@@ -132,3 +132,7 @@ Template.searchTweets.events({
 ```
 
 If you look in this repo's code, you'll see we actually use the `result` to display the tweets that we find, so take a look there for a practical solution.
+
+---------
+
+MIT
