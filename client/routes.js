@@ -1,6 +1,7 @@
 Router.configure({
     layoutTemplate: 'layout',
     loadingTemplate: 'loading',
+    notFoundTemplate: 'notFound',
     yieldTemplates:{
         header:{to:'header'}
     }
@@ -65,6 +66,10 @@ Router.map(function () {
         onBeforeAction: function(){
             Tweets.remove({});
         }
+    });
+
+    this.route('notFound', {
+        path: '*'
     });
 });
 
