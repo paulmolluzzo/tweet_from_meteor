@@ -1,11 +1,9 @@
 Accounts.onCreateUser(function (options, user){
    user.profile = options.profile || {};
-   // Save username and picture on login
    if(user.services.twitter){
-       user.profile.picture= user.services.twitter.profile_image_url_https;
-       user.profile.username= user.services.twitter.screenName;
+       user.profile.picture = user.services.twitter.profile_image_url_https;
+       user.profile.username = user.services.twitter.screenName;
    }
-   console.log(user);
    return user;
 });
 
