@@ -16,3 +16,4 @@ doc/
 .DS_Store
 .gitconfig.private
 settings.json
+server/apm.js
