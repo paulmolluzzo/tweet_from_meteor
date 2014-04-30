@@ -1,0 +1,72 @@
+<template name="userLoop">
+    {{#each users}}
+        <div class="row col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <div class="media">
+                            <a class="pull-left" href="http://twitter.com/{{screen_name}}">
+                                <img src="{{profile_image_url}}" class="media-object">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="http://twitter.com/{{screen_name}}">{{name}}</a></h4>
+                                {{description}} - <a href="{{url}}">{{url}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-condensedtable-responsive">
+                        <thead>
+                            <th>Data Point</th>
+                            <th>Key</th>
+                            <th>Value</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>id:</td>
+                                <td>user.id</td>
+                                <td>{{id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Screen Name:</td>
+                                <td>user.screen_name</td>
+                                <td>{{screen_name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Name:</td>
+                                <td>user.name</td>
+                                <td>{{name}}</td>
+                            </tr>
+                            <tr>
+                                <td>URL:</td>
+                                <td>user.url</td>
+                                <td><a href="{{url}}">{{url}}</a></td>
+                            </tr>
+                            <tr>
+                                <td>Followers:</td>
+                                <td>user.followers_count</td>
+                                <td>{{followers_count}}</td>
+                            </tr>
+                            <tr>
+                                <td>Following:</td>
+                                <td>user.friends_count</td>
+                                <td>{{friends_count}}</td>
+                            </tr>
+                            <tr>
+                                <td>Statuses:</td>
+                                <td>user.statuses_count</td>
+                                <td>{{statuses_count}}</td>
+                            </tr>
+                            <tr>
+                                <td>Verified:</td>
+                                <td>user.verified</td>
+                                <td>{{#if verified}}True{{else}}False{{/if}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</template>

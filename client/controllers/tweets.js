@@ -1,8 +1,8 @@
-Template.searchTweets.tweets = function() {
+Template.tweetLoop.tweets = function() {
 	return Tweets.find({});
 };
 
-Template.searchTweets.isPhoto = function() {
+Template.TweetLoop.isPhoto = function() {
     return this.type === "photo";
 };
 
