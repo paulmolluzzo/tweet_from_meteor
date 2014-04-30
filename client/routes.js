@@ -67,10 +67,6 @@ Router.map(function () {
             Tweets.remove({});
         }
     });
-
-    this.route('notFound', {
-        path: '*'
-    });
 });
 
 Router.onRun(function(){
