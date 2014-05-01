@@ -14,6 +14,5 @@ Template.searchUsers.events({
                     }
             }
         });
-        return Users.find({});
     }
 })

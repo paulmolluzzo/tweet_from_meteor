@@ -14,6 +14,5 @@ Template.searchTweets.events({
                 }
             }
         });
-        return Tweets.find({});
     }
 })

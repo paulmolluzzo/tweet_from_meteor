@@ -9,6 +9,5 @@ Template.getUser.events({
                     Users.insert(result.data);
             }
         });
-        return Users.findOne({});
     }
 })

@@ -12,5 +12,4 @@ Template.mentionTimeline.rendered = function(){
             }
         }
     });
-    return Tweets.find({});
 }
