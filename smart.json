@@ -3,9 +3,7 @@
     "streams": {},
     "semantic-ui": {},
     "momentjs": {},
-    "twitter-api": {
-      "git": "https://github.com/matthewforr/meteor-twitter-api.git"
-    },
+    "twitter-api": {},
     "bootstrap-3": {},
     "iron-router": {},
     "GAnalytics": {},

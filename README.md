@@ -31,19 +31,6 @@ git clone git@github.com:paulmolluzzo/meteor_twitter_actions.git
 cd meteor_twitter_actions
 mrt
 ```
-
-A note about the `twitter-api` package: I'm not using this package available on Atmosphere as it is currently outdated (and non-functional). Instead I'm using a personal fork. To make sure you're running the same version, your `smart.json` file should include:
-
-```
-"twitter-api": {
-        "git": "https://github.com/paulmolluzzo/meteor-twitter-api.git"
-    }
-```
-
-Your `smart.lock` should also refer to that GitHub repo.
-
-If you had to manually change your `smart.json` file, run `mrt update twitter-api` afterwards to ensure you have the latest version.
-
 ## The Structure of the App
 
 I wrote this app so it's easy to find the HTML/JS for a specific action or method. Below is the file tree.

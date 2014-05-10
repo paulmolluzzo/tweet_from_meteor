@@ -5,10 +5,7 @@
       "streams": {},
       "semantic-ui": {},
       "momentjs": {},
-      "twitter-api": {
-        "git": "https://github.com/matthewforr/meteor-twitter-api.git",
-        "branch": "master"
-      },
+      "twitter-api": {},
       "bootstrap-3": {},
       "iron-router": {},
       "GAnalytics": {},
@@ -31,9 +28,9 @@
         "commit": "59a762e297082eea8b8cae00374c2b7ac6f89529"
       },
       "twitter-api": {
-        "git": "https://github.com/matthewforr/meteor-twitter-api.git",
-        "branch": "master",
-        "commit": "03332c69a3aa5131ea4c343f56888cae0f82cadb"
+        "git": "https://github.com/Sewdn/meteor-twitter-api.git",
+        "tag": "v0.1.2",
+        "commit": "d940e1018cb56ed011948a8fc36eb721d201cb60"
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
@@ -52,8 +49,8 @@
       },
       "apm": {
         "git": "https://github.com/arunoda/meteor-apm-client.git",
-        "tag": "v1.2.2",
-        "commit": "46019950b917191b78a9c81349421521ce07a932"
+        "tag": "v1.2.6",
+        "commit": "426e3c3c33457736ec64d8af17c765d477d1476b"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
