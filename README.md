@@ -4,13 +4,14 @@ This is a barebones app that showcases ways to perform common Twitter actions us
 
 * Searching Tweets
 * Searching Users
+* Following and Unfollowing Users
 * Retrieving a User's Home Timeline
 * Retrieving a User's Tweet Timeline
 * Retrieving a User's Mention Timeline
 * Getting a Single User
 * Posting a Tweet
 
-(Note: I plan to add examples of streaming by search term, following a User, and favoriting a tweet.)
+(Note: I plan to add examples of streaming by search term and favoriting a tweet.)
 
 ## To Get Started
 
@@ -41,6 +42,9 @@ I wrote this app so it's easy to find the HTML/JS for a specific action or metho
     | |____controllers
     | | |____tweets.js
     | | |____users.js
+    |____follow_button
+    | | |____follow_button.html
+    | | |____follow_button.js
     | |____get_a_user
     | | |____get_a_user.html
     | | |____get_a_user.js
