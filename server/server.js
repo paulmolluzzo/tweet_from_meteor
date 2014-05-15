@@ -23,6 +23,14 @@ Meteor.methods({
         return twitter.get('users/show.json', {screen_name: term});
     },
 
+    followUser: function (user) {
+        return twitter.follow(user);
+    },
+
+    unfollowUser: function (user) {
+        return twitter.unfollow(user);
+    },
+
     searchUsers: function(term, page, count) {
         return twitter.usersSearch(term, page, count)
     },
